@@ -154,8 +154,8 @@ SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 OWNER_ID = int(os.environ.get("OWNER_ID") or 0)
 
 # Support
-GROUP = os.environ.get("GROUP", "Wyzsupport")
-CHANNEL = os.environ.get("CHANNEL", "wyzchannel")
+GROUP = os.environ.get("GROUP", "WyzSupport")
+CHANNEL = os.environ.get("CHANNEL", "wyzChannel")
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -170,7 +170,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/grey423/CilikUserbot.git"
+    "UPSTREAM_REPO_URL", "https://github.com/WHYFZN/wyzubot.git"
 )
 UPSTREAM_REPO_BRANCH = os.environ.get(
     "UPSTREAM_REPO_BRANCH", "Wyz-Userbot")
@@ -218,7 +218,7 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 ALIVE_TEKS_CUSTOM = os.environ.get("ALIVE_TEKS_CUSTOM", None)
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "I'Am Alive")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Aku Aktif")
 
 # Custom Emoji Alive
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "✪")
@@ -354,7 +354,7 @@ except Exception as e:
 async def update_restart_msg(chat_id, msg_id):
     message = (
         f"**Wyz-UserBot v{BOT_VER} is back up and running!**\n\n"
-        f"**Telethon:** {version.__version__}\n"
+        f"**Pyrogram:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {owner}"
     )
@@ -613,7 +613,7 @@ with bot:
                         0,
                         "image/jpeg",
                         []),
-                    text="**Wyz-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✪ **Owner Repo :** [WyZ </>](https://t.me/Whyfzn)\n✪ **Support :** @Wyzsupport\n✪ **Repository :** [Wyz-Userbot](https://github.com/Whyfzn/wyz-ubot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Wyz-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✪ **Owner Repo :** [WyZ </>](https://github.com/WHYFZN/wyzubot/)\n✪ **Support :** @Wyzsupport\n✪ **Repository :** [Wyz-Userbot](https://github.com/Whyfzn/wyz-ubot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -621,7 +621,7 @@ with bot:
                                 "https://t.me/wyzsupport"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/whyfzn/wyz-ubot"),
+                                "https://github.com/WHYFZN/wyzubot/"),
                         ],
                     ],
                     link_preview=False,
@@ -676,7 +676,7 @@ with bot:
                                 "https://t.me/wyzsupport"),
                             custom.Button.url(
                                 "Repo",
-                                "https://github.com/whyfzn/wyz-ubot"),
+                                "https://github.com/WHYFZN/wyzubot/"),
                         ],
                     ],
                     link_preview=False,
