@@ -23,8 +23,8 @@ async def autopilot():
         try:
             r = await bot(
                 CreateChannelRequest(
-                    title="My Cilik Logs",
-                    about="Cilik Log Group\n\n Join @CilikSupport",
+                    title="WyZ Logs",
+                    about="WyZ Log Group\n\n Join @WyzSupport",
                     megagroup=True,
                 ),
             )
