@@ -1,11 +1,11 @@
-FROM WHYFZN/wzyubot:buster
+FROM greycilik/cilikuserbot:buster
 
-RUN git clone -b main https://github.com/WHYFZN/wyzubot /home/main/ \
-    && chmod 777 /home/main \
-    && mkdir /home/main/bin/
+RUN git clone -b main https://github.com/WHYFZN/wyzubot /home/wyzubot/ \
+    && chmod 777 /home/wyzubot \
+    && mkdir /home/wyzubot/bin/
 
-COPY ./sample_config.env ./config.env* /home/main/
+COPY ./sample_config.env ./config.env* /home/wyzubot/
 
-WORKDIR /home/main/
+WORKDIR /home/wyzubot/
 
 CMD ["python3", "-m", "userbot"]
