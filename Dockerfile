@@ -1,8 +1,8 @@
 FROM greycilik/cilikuserbot:buster
 
-RUN git clone -b main https://github.com/wyzubot /home/wyzubot/ \
+RUN git clone -b main https://github.com/WHYFZN/wyzubot /home/wyzubot/ \
     && chmod 777 /home/wyzubot \
-    && mkdir /home/wyzubot/
+    && mkdir /home/wyzubot/bin/
 
 COPY ./sample_config.env ./config.env* /home/wyzubot/
 
