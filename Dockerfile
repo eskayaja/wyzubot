@@ -1,6 +1,6 @@
-FROM WHYFZN/wyzubot:buster
+FROM whyfzn/wyzubot:buster
 
-RUN git clone -b main https://github.com/WHYFZN/wyzubot /home/wyzubot/ \
+RUN git clone -b main https://github.com/whyfzn/wyzubot /home/wyzubot/ \
     && chmod 777 /home/wyzubot \
     && mkdir /home/wyzubot/bin/
 
