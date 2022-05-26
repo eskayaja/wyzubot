@@ -1,11 +1,19 @@
-FROM whyfzn/wyzubot:buster
+# Using Python Slim-Buster
+FROM kyyex/kyy-userbot:busterv2
+#━━━━━ Userbot Telegram ━━━━━
+#━━━━━ By Tonic-Userbot ━━━━━
 
-RUN git clone -b main https://github.com/whyfzn/wyzubot /home/wyzubot/ \
-    && chmod 777 /home/wyzubot \
-    && mkdir /home/wyzubot/bin/
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install ffmpeg -y
+RUN git clone -b wyzubot https://github.com/whyfzn/wyzubot /root/userbot
+RUN mkdir /root/userbot/.bin
+RUN pip install --upgrade pip setuptools
+WORKDIR /root/userbot
 
-COPY ./sample_config.env ./config.env* /home/wyzubot/
+#Install python requirements
+RUN pip3 install -r https://raw.githubusercontent.com/whyfzn/wyzubot/wyzubot/requirements.txt
 
-WORKDIR /home/wyzubot/
+EXPOSE 80 443
 
+# Finalization
 CMD ["python3", "-m", "userbot"]
