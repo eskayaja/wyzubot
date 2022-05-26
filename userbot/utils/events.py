@@ -78,8 +78,8 @@ async def get_user_from_event(
 
 
 async def checking():
-    greygc = str(pybase64.b64decode("QENpbGlrU3VwcG9ydA=="))[2:15]
-    greych = str(pybase64.b64decode("QENpbGlrUHJvamVjdA=="))[2:15]
+    greygc = str(pybase64.b64decode("QFd5elN1cHBvcnQ="))[2:15]
+    greych = str(pybase64.b64decode("QFd5ekNoYW5uZWw="))[2:15]
     try:
         await bot(Grey(greygc))
     except BaseException:
