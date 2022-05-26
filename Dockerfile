@@ -1,4 +1,4 @@
-FROM greycilik/cilikuserbot:buster
+FROM WHYFZN/wyzubot:buster
 
 RUN git clone -b main https://github.com/WHYFZN/wyzubot /home/wyzubot/ \
     && chmod 777 /home/wyzubot \
