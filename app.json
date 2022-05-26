@@ -2,7 +2,7 @@
   "name": "Wyz-Userbot",
   "description": "[Wyz-Userbot] userbot Telegram modular yang berjalan pada Python 3.9+",
   "logo": "https://telegra.ph/file/05e4efd0245a4a7643d7f.jpg",
-  "keywords": ["telegram", "userbot", "cilik-userbot", "modular", "python"],
+  "keywords": ["telegram", "userbot", "wyzubot", "modular", "python"],
   "repository": "https://github.com/WHYFZN/wyzubot",
   "stack": "container",
   "env": {
@@ -15,7 +15,7 @@
       "required": true 
     },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di Grup » https://t.me/CilikSupport » Lalu ketik #string",
+      "description": "Dapatkan String Session di Grup » https://t.me/wyzsupport » Lalu ketik #string",
       "required": true
     },
     "HEROKU_APP_NAME": {
