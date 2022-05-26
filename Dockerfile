@@ -5,7 +5,7 @@ FROM kyyex/kyy-userbot:busterv2
 
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install ffmpeg -y
-RUN git clone -b wyzubot https://github.com/whyfzn/wyzubot /home/wyzubot
+RUN git clone -b wyzubot https://github.com/whyfzn/wyzubot /home/main
 RUN mkdir /home/wyzubot
 RUN pip install --upgrade pip setuptools
 WORKDIR /home/wyzubot
