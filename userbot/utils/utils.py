@@ -57,8 +57,8 @@ async def autopilot():
     try:
         r = await bot(
             CreateChannelRequest(
-                title="𝗖𝗶𝗹𝗶𝗸-𝗟𝗼𝗴𝘀 💫",
-                about="Cilik Logs Userbot\n\nJoin @CilikProject",
+                title="WyZ Logs 💫",
+                about="WyZ Logs Userbot\n\nJoin @WyzSupport",
                 megagroup=True,
             ),
         )
@@ -97,11 +97,11 @@ async def autobot():
         BOTLOG_CHATID, "**SEDANG MEMBUAT BOT TELEGRAM UNTUK ANDA DI @BotFather**"
     )
     who = await bot.get_me()
-    name = who.first_name + " Assistant Bot"
+    name = who.first_name + " Bot"
     if who.username:
-        username = who.username + "_ubot"
+        username = who.username + "_wyzbot"
     else:
-        username = "cilik" + (str(who.id))[5:] + "ubot"
+        username = "cilik" + (str(who.id))[5:] + "wyzubot"
     bf = "@BotFather"
     await bot(UnblockRequest(bf))
     await bot.send_message(bf, "/cancel")
@@ -163,7 +163,7 @@ async def autobot():
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
             await bot.send_message(
-                bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @CilikProject\n\n✨ Powered By ~ @CilikSupport"
+                bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @WyzSupport\n\n✨ Powered By ~ @WyzSupport"
             )
             await bot.send_message(
                 BOTLOG_CHATID,
@@ -183,7 +183,7 @@ async def autobot():
                              anonymous=False,
                              manage_call=True,
                          )
-            await bot(EditAdminRequest(int(BOTLOG_CHATID), f"@{username}", rights, "ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴄɪʟɪᴋ"))
+            await bot(EditAdminRequest(int(BOTLOG_CHATID), f"@{username}", rights, "ASSISTANT WYZ"))
             ppk = "userbot/resources/logo.jpg"
             await bot(EditPhotoRequest(BOTLOG_CHATID, await bot.upload_file(ppk)))
             heroku_var["BOT_TOKEN"] = token
@@ -218,7 +218,7 @@ async def autobot():
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @CilikProject\n\n✨ Powered By ~ @CilikSupport"
+            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @WhySupport\n\n✨ Powered By ~ @WhySupport"
         )
         await bot.send_message(
             BOTLOG_CHATID,
@@ -238,7 +238,7 @@ async def autobot():
                  anonymous=False,
                  manage_call=True,
              )
-        await bot(EditAdminRequest(int(BOTLOG_CHATID), f"@{username}", rights, "ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴄɪʟɪᴋ"))
+        await bot(EditAdminRequest(int(BOTLOG_CHATID), f"@{username}", rights, "ASSISTANT WYZ"))
         ppk = "userbot/resources/logo.jpg"
         await bot(EditPhotoRequest(BOTLOG_CHATID, await bot.upload_file(ppk)))
         heroku_var["BOT_TOKEN"] = token
